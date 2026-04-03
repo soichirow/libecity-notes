@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Claude オフ会 - リベシティ</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,6 +46,11 @@
     </div>
   </div>
   <p class="subtitle">リベシティ 生成AI オフ会</p>
+  <div class="hero-pills">
+    <div class="hero-pill"><i class="fa-solid fa-folder-open"></i><span>ファイル整理</span></div>
+    <div class="hero-pill"><i class="fa-solid fa-globe"></i><span>Web調査</span></div>
+    <div class="hero-pill"><i class="fa-solid fa-wand-magic-sparkles"></i><span>自動化</span></div>
+  </div>
 </div>
 
 <!-- ==================== 2. TODAY'S GOAL ==================== -->
@@ -53,6 +60,11 @@
   <div class="big-msg">
     Claudeの基本的な知識を身につけて<br>
     <span class="huge">明日から仕事に活かせる!</span>
+  </div>
+  <div class="hero-pills hero-pills--goal">
+    <div class="hero-pill"><i class="fa-solid fa-lightbulb"></i><span>まず理解する</span></div>
+    <div class="hero-pill"><i class="fa-solid fa-hand-pointer"></i><span>その場で試す</span></div>
+    <div class="hero-pill"><i class="fa-solid fa-briefcase"></i><span>仕事に持ち帰る</span></div>
   </div>
 </div>
 
@@ -70,16 +82,16 @@
       <div class="timeline-content"><strong>アイスブレイク</strong><small>近くの人とお話ししましょう</small></div>
     </div>
     <div class="timeline-item highlight">
-      <div class="timeline-time">45分</div>
-      <div class="timeline-content"><strong>Claude Coworkの真髄と活用</strong><small>3大機能・スキル・使いこなしのコツ・導入</small></div>
+      <div class="timeline-time">15分</div>
+      <div class="timeline-content"><strong>Claude Coworkの真髄と活用</strong><small>役割の違い・主要機能・活用イメージ</small></div>
     </div>
     <div class="timeline-item">
-      <div class="timeline-time">45分</div>
+      <div class="timeline-time">60分</div>
       <div class="timeline-content"><strong>ハンズオン (メイン)</strong><small>実際にさわってみよー！</small></div>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-time">20分</div>
-      <div class="timeline-content"><strong>クロージング</strong><small>雑談・交流・集合写真</small></div>
+    <div class="timeline-item buffer">
+      <div class="timeline-time">35分</div>
+      <div class="timeline-content"><strong>予備時間</strong><small>質疑応答・交流・調整用</small></div>
     </div>
   </div>
 </div>
@@ -140,6 +152,12 @@
   <span class="section-num">Section 3</span>
   <h2>Claude Coworkの真髄</h2>
   <p class="section-subtitle">「相談」から「代行」へ。スムーズな導入と活用のコツ</p>
+  <div class="section-visual">
+    <div class="section-visual__item"><i class="fa-solid fa-folder-open"></i><span>Files</span></div>
+    <div class="section-visual__item"><i class="fa-solid fa-globe"></i><span>Browser</span></div>
+    <div class="section-visual__item"><i class="fa-solid fa-brain"></i><span>Skills</span></div>
+    <div class="section-visual__item"><i class="fa-solid fa-calendar-check"></i><span>Schedule</span></div>
+  </div>
 </div>
 
 <!-- ==================== 6. WHAT IS CLAUDE ==================== -->
@@ -148,24 +166,180 @@
   <h2>Claudeってなに?</h2>
   <div class="feature-grid three-cols">
     <div class="feature-card">
-      <div class="icon">🤖</div>
+      <div class="icon"><i class="fa-solid fa-robot"></i></div>
       <h3>Anthropic社の生成AI</h3>
-      <p>ChatGPTのライバル。自然な日本語と丁寧な回答が特徴。学長も注目!</p>
+      <p>自然な日本語が得意で、考えを整理したり文章を作ったりできるAIです。</p>
     </div>
     <div class="feature-card">
-      <div class="icon">💬</div>
-      <h3>会話で何でもできる</h3>
-      <p>文章作成、相談、アイデア出し、プログラミング、翻訳...</p>
+      <div class="icon"><i class="fa-solid fa-comments"></i></div>
+      <h3>会話でいろいろできる</h3>
+      <p>相談、要約、文章作成、アイデア出し、調査のたたき台づくりまで幅広く対応。</p>
     </div>
     <div class="feature-card">
-      <div class="icon">📱</div>
+      <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
       <h3>どこでも使える</h3>
-      <p>Web / iPhone / Android / PC アプリ対応</p>
+      <p>Web / スマホ / PC で使えて、用途に合わせて気軽に始められます。</p>
     </div>
   </div>
 </div>
 
-<!-- ==================== 7. THIS SLIDE = CLAUDE ==================== -->
+<!-- ==================== 7. CLAUDE AGENTS ==================== -->
+<div class="slide slide-overview">
+  <div class="bg-dots"></div>
+  <h2>Claudeの2つのエージェント</h2>
+  <div class="agent-compare">
+    <div class="feature-card code-highlight agent-compare__card">
+      <div class="icon"><i class="fa-solid fa-user-group"></i></div>
+      <h3>Cowork</h3>
+      <p>誰でも使いやすい。チャット感覚でPC操作・ブラウザ操作・ファイル作業まで進められます。</p>
+      <div class="agent-compare__img"><img src="cowork-welcome.png" alt="Cowork"></div>
+    </div>
+    <div class="feature-card agent-compare__card agent-compare__card--secondary">
+      <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
+      <h3>Claude Code</h3>
+      <p>エンジニア向け。ターミナルで動作し、コード編集や開発作業を強力に進められます。</p>
+      <div class="agent-compare__img"><img src="claude-code.png" alt="Claude Code"></div>
+    </div>
+  </div>
+  <p class="cta-msg">初心者はまず Cowork を触ってみよう!</p>
+</div>
+
+<!-- ==================== 8. REQUEST VS CONSULT ==================== -->
+<div class="slide slide-overview">
+  <div class="bg-dots"></div>
+  <h2>「相談」から「依頼」へ</h2>
+  <div class="compare-container">
+    <div class="compare-box">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" class="brand-icon brand-icon--openai">
+      <h3>ChatGPT</h3>
+      <ul>
+        <li>優秀な「相談役」</li>
+        <li>アイデアや文章を出す</li>
+        <li>最後は人が手を動かす</li>
+      </ul>
+    </div>
+    <div class="compare-box claude">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/anthropic.svg" class="brand-icon brand-icon--anthropic">
+      <h3>Claude Cowork</h3>
+      <ul>
+        <li>頼れる「代行者」</li>
+        <li>PCやブラウザも扱える</li>
+        <li>AIが実務を前に進める</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 9. COWORK OVERVIEW ==================== -->
+<div class="slide slide-overview">
+  <div class="bg-dots"></div>
+  <h2>すごいぞ！Claude Cowork</h2>
+  <p class="sub-msg sub-msg--top">できることは大きく4つ。ここを押さえると全体像がつかめます。</p>
+  <div class="feature-grid">
+    <div class="feature-card code-highlight">
+      <div class="icon"><i class="fa-solid fa-folder-open"></i></div>
+      <h3>ファイルを扱える</h3>
+      <p>パソコンの中の資料やデータを読んで、整理・比較・要約まで進められます。</p>
+    </div>
+    <div class="feature-card code-highlight">
+      <div class="icon"><i class="fa-solid fa-globe"></i></div>
+      <h3>ブラウザを扱える</h3>
+      <p>検索やページ確認をしながら、情報収集から整理までつなげられます。</p>
+    </div>
+    <div class="feature-card code-highlight">
+      <div class="icon"><i class="fa-solid fa-brain"></i></div>
+      <h3>スキルで自動化</h3>
+      <p>一度教えた手順を覚えて、同じ作業を一言で呼び出せます。</p>
+    </div>
+    <div class="feature-card code-highlight">
+      <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+      <h3>スケジュール実行</h3>
+      <p>定期タスクを時間指定で回して、毎日の面倒を減らせます。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 10. FILES ==================== -->
+<div class="slide slide-overview">
+  <div class="bg-dots"></div>
+  <h2>パソコンの中のファイルを操作できる</h2>
+  <div class="install-steps">
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-desktop"></i></div>
+      <div class="step-text"><strong>具体例: 散らかったデスクトップを整理</strong><br>「散らかっているデスクトップを、種類ごとにフォルダ分けして整理して」のように頼めます。</div>
+    </div>
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-folder-open"></i></div>
+      <div class="step-text"><strong>Downloadsフォルダも片づけられる</strong><br>「Downloadsフォルダを日付と種類で整理して」と頼むと、あとで探しやすい形に整えやすいです。</div>
+    </div>
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-bolt"></i></div>
+      <div class="step-text"><strong>ハンズオンでもすぐ試せる</strong><br>自分の手元にある実ファイルを使うので、「あ、これ助かる」が一番伝わりやすい機能です。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 11. BROWSER ==================== -->
+<div class="slide slide-overview">
+  <div class="bg-dots"></div>
+  <h2>ブラウザを扱える</h2>
+  <div class="install-steps">
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+      <div class="step-text"><strong>具体例: 高配当株を調べる</strong><br>「学長おすすめの高配当株から、最新の銘柄を1つ取得して、現在の配当利回りを教えて」と頼めます。</div>
+    </div>
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-compass-drafting"></i></div>
+      <div class="step-text"><strong>検索 → 確認 → 要約までつながる</strong><br>候補を探して、ページを見て、必要な情報だけを抜き出して教えてもらえます。</div>
+    </div>
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-note-sticky"></i></div>
+      <div class="step-text"><strong>あとでスキル化しやすい</strong><br>「この調べ方いいな」と思ったら、そのまま次のスキル化や定期実行につなげられます。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 12. SKILLS ==================== -->
+<div class="slide slide-overview">
+  <div class="bg-dots"></div>
+  <h2>スキル機能で自動化できる</h2>
+  <div class="install-steps">
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-brain"></i></div>
+      <div class="step-text"><strong>具体例: さっきの高配当株チェックを覚えさせる</strong><br>「さっきの学長高配当株チェックのやり方をスキルにしといて」と頼むイメージです。</div>
+    </div>
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-bullseye"></i></div>
+      <div class="step-text"><strong>次回から一言で呼べる</strong><br>次からは「高配当株チェックして」だけで、同じ流れを再現しやすくなります。</div>
+    </div>
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-briefcase"></i></div>
+      <div class="step-text"><strong>いつもの調べ物に向いている</strong><br>毎回同じサイトを見る作業、同じ観点で確認する作業を省力化できます。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 13. SCHEDULE ==================== -->
+<div class="slide slide-overview">
+  <div class="bg-dots"></div>
+  <h2>スケジュールで定期タスクを回せる</h2>
+  <div class="install-steps">
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-calendar-check"></i></div>
+      <div class="step-text"><strong>具体例: 毎週火曜日に高配当株チェック</strong><br>「毎週火曜日に高配当株チェックして」と設定しておけば、定期確認を任せられます。</div>
+    </div>
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-circle-check"></i></div>
+      <div class="step-text"><strong>抜け漏れを減らせる</strong><br>毎週見たい情報、毎月やる確認を「思い出したらやる」から卒業できます。</div>
+    </div>
+    <div class="install-step">
+      <div class="step-number"><i class="fa-solid fa-clock"></i></div>
+      <div class="step-text"><strong>小さな面倒を手放せる</strong><br>習慣にしたいチェックほど、自動化するとラクさを実感しやすいです。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 14. THIS SLIDE = CLAUDE ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <div class="big-msg text-center">
@@ -173,11 +347,11 @@
     <span class="huge">このスライドも<br>Claudeで作りました</span>
     <br>
     <span class="text-sub">こだわらなければ <strong class="accent">約1時間</strong> で完成</span><br>
-    <span class="text-note">こだわると...無限の時間!<br>(実際は楽しく3時間程度かけました)</span>
+    <span class="text-note">構成出し、文言整理、HTML化までかなり手伝ってくれます。</span>
   </div>
 </div>
 
-<!-- ==================== 8. REAL EXPERIENCE ==================== -->
+<!-- ==================== 15. REAL EXPERIENCE ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <div class="slide-header-with-avatar">
@@ -188,7 +362,7 @@
   </div>
   <div class="experience-card">
     <div class="exp-title"><a href="https://soichirow.github.io/my-9-cards-mtg/" target="_blank">私を作ったマジック9枚</a></div>
-    <div class="exp-subtitle">世界中で3万アクセス超！Claude Codeで爆速開発した事例です</div>
+    <div class="exp-subtitle">世界中で3万アクセス超。Claude Codeで短時間開発した実例です。</div>
     <div class="exp-stats">
       <div class="exp-stat accent"><div class="exp-stat-number">約2時間</div><div class="exp-stat-label">開発期間</div></div>
       <div class="exp-stat"><div class="exp-stat-number">30,000+</div><div class="exp-stat-label">アクセス</div></div>
@@ -201,197 +375,17 @@
   </div>
 </div>
 
-<!-- ==================== 9. AIの進化メッセージ ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <div class="big-msg">
-    AIは<br>
-    <span class="huge">「相談相手」から<br>「実務の代行者」へ</span>
-    <span class="text-sub">PC操作・ブラウザ操作・自動実行の時代</span>
-  </div>
-</div>
-
-<!-- ==================== 10. ChatGPT vs Claude ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <h2>「相談」から「依頼」へ</h2>
-  <div class="compare-container">
-    <div class="compare-box">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" class="brand-icon brand-icon--openai">
-      <h3>ChatGPT</h3>
-      <ul>
-        <li>優秀な「相談役」</li>
-        <li>アイデアを出す</li>
-        <li>人間がコピペする</li>
-      </ul>
-    </div>
-    <div class="compare-box claude">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/anthropic.svg" class="brand-icon brand-icon--anthropic">
-      <h3>Claude Cowork</h3>
-      <ul>
-        <li>最強の「代行者」</li>
-        <li>PC・ブラウザを操作</li>
-        <li>AIが実演する</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== 11. Cowork 3大旗印 ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <h2>すごいぞ！Claude Cowork</h2>
-  <p class="sub-msg sub-msg--top">パソコンのファイルを読み書きできる！</p>
-  <div class="feature-grid three-cols">
-    <div class="feature-card code-highlight">
-      <div class="icon">🌐</div>
-      <h3>ブラウザを扱える</h3>
-      <p>検索から、特定のサイトでの操作までAIが直接実行</p>
-    </div>
-    <div class="feature-card code-highlight">
-      <div class="icon">🧠</div>
-      <h3>スキル機能で、自動化！</h3>
-      <p>一度教えた手順を記憶。一言でルーチンワークを再現</p>
-    </div>
-    <div class="feature-card code-highlight">
-      <div class="icon">⏰</div>
-      <h3>スケジュールで<br>毎日のタスクを片付けろ！</h3>
-      <p>決まった時間に自動で作業を開始。あなたの時間を創出</p>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== 12. スキル機能の真髄 ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <h2>スキル ＝ 手順の記憶</h2>
-  <div class="install-steps">
-    <div class="install-step">
-      <div class="step-number">🧠</div>
-      <div class="step-text"><strong>一度教えたら忘れない</strong><br>「ブログの構成」や「特定の資料作成」の手順をスキルとして登録</div>
-    </div>
-    <div class="install-step">
-      <div class="step-number">🚀</div>
-      <div class="step-text"><strong>一言で呼び出し</strong><br>「いつもの資料作って」だけで、教えた手順を忠実に再現</div>
-    </div>
-  </div>
-  <p class="text-sub text-sub--spaced">※ あなただけの「専属アシスタント」が育ちます</p>
-</div>
-
-<!-- ==================== 13. CLAUDE CODE & COWORK ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <h2>Claudeの2つのエージェント</h2>
-  <div class="agent-compare">
-    <div class="feature-card code-highlight agent-compare__card">
-      <div class="icon">🤝</div>
-      <h3>Cowork</h3>
-      <p>誰でも使える。チャット感覚でPC操作・ブラウザ操作・ファイル作成まで</p>
-      <div class="agent-compare__img"><img src="cowork-welcome.png" alt="Cowork"></div>
-    </div>
-    <div class="feature-card agent-compare__card agent-compare__card--secondary">
-      <div class="icon">💻</div>
-      <h3>Claude Code</h3>
-      <p>エンジニア向け。ターミナルで動作し、ソースコード全般を自動編集</p>
-      <div class="agent-compare__img"><img src="claude-code.png" alt="Claude Code"></div>
-    </div>
-  </div>
-  <p class="cta-msg">初心者はまず Cowork を触ってみよう! 🚀</p>
-</div>
-
-<!-- ==================== 14. AIの進化 ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <div class="big-msg">
-    AIは<br>
-    <span class="huge">「相談相手」から<br>「任せる相手」へ</span>
-    <span class="text-sub">質問するだけでなく、実際の作業を任せて時短する時代</span>
-  </div>
-</div>
-
-<!-- ==================== 15. 導入はかんたん ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <h2>導入はかんたん！</h2>
-  <div class="intro-layout">
-    <div class="install-steps install-steps--compact">
-      <div class="install-step install-step--small">
-        <div class="step-number step-number--small">🤝</div>
-        <div class="step-text step-text--small">Desktopアプリの<strong>「Cowork」タブ</strong>を選ぶだけ</div>
-      </div>
-      <div class="install-step install-step--small">
-        <div class="step-number step-number--small">📁</div>
-        <div class="step-text step-text--small"><strong>ファイルを渡す</strong>と中身を読み解き作業開始</div>
-      </div>
-      <div class="install-step install-step--small">
-        <div class="step-number step-number--small">🌐</div>
-        <div class="step-text step-text--small"><strong>Chrome拡張</strong>でWeb調査も任せられる</div>
-      </div>
-    </div>
-    <div class="intro-layout__screenshot">
-      <div class="screenshot-item screenshot-item--featured">
-        <img src="cowork-welcome.png" alt="Cowork画面">
-        <div class="screenshot-caption screenshot-caption--accent">実際のCoworkの操作画面</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== 16. Coworkを使うコツ ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <h2>Coworkを使う最重要ルール</h2>
-  <div class="install-steps">
-    <div class="install-step">
-      <div class="step-number">📝</div>
-      <div class="step-text"><strong>質問ではなく「依頼」で書く</strong><br>「これどう思う?」→「この雛形で見積書を作って保存して」</div>
-    </div>
-    <div class="install-step">
-      <div class="step-number">🎯</div>
-      <div class="step-text"><strong>Plan Modeを信じる</strong><br>まず計画を立てさせ、納得してから「Run」を押す</div>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== 17. INSTALL ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <h2>まずは無料でインストール!</h2>
-  <div class="install-steps">
-    <div class="install-step">
-      <div class="step-number">1</div>
-      <div class="step-text"><strong><a href="https://claude.ai" target="_blank" class="link-orange">claude.ai</a></strong> にアクセス</div>
-    </div>
-    <div class="install-step">
-      <div class="step-number">2</div>
-      <div class="step-text"><strong>メールアドレス</strong>でアカウント作成</div>
-    </div>
-    <div class="install-step">
-      <div class="step-number">3</div>
-      <div class="step-text">PC版アプリをダウンロードして<strong>Cowork</strong>をオン!</div>
-    </div>
-  </div>
-</div>
-
-<!-- ==================== 18. 料金について ==================== -->
-<div class="slide slide-overview">
-  <div class="bg-dots"></div>
-  <h2>さらに使いこなすなら (料金)</h2>
-  <div class="install-steps">
-    <div class="install-step">
-      <div class="step-number">💰</div>
-      <div class="step-text"><strong>Proプラン ($20/月)</strong><br>Cowork、スキル、最新モデル(Claude 3.7)が使い放題</div>
-    </div>
-    <p class="tip-box">まずは無料版で触ってみて、良ければProへ🚀</p>
-  </div>
-</div>
-
 <!-- ==================== Section 4: HANDS-ON ==================== -->
 <div class="slide slide-section">
   <div class="bg-dots"></div>
   <span class="section-num">Section 4</span>
   <h2>ハンズオン！</h2>
-  <p class="section-subtitle">実際にさわってみよー！ (45分)</p>
+  <p class="section-subtitle">実際にさわってみよー！ (60分)</p>
+  <div class="section-visual">
+    <div class="section-visual__item"><i class="fa-solid fa-copy"></i><span>Copypaste OK</span></div>
+    <div class="section-visual__item"><i class="fa-solid fa-computer-mouse"></i><span>Try It</span></div>
+    <div class="section-visual__item"><i class="fa-solid fa-handshake-angle"></i><span>Ask Freely</span></div>
+  </div>
 </div>
 
 <!-- ==================== 19. HANDS-ON ==================== -->
@@ -403,9 +397,9 @@
   </div>
   <p class="text-sub text-sub--spaced">隣の人と相談しながらでもOKです</p>
   <div class="idea-cards idea-cards--spaced">
-    <div class="idea-card copyable" data-copy="ファイルを整理して"><div class="idea-icon">🗂️</div><h3>フォルダ整理</h3><p class="idea-card__hint">「ファイルを整理して」</p><span class="copy-badge">tap to copy</span></div>
-    <div class="idea-card copyable" data-copy="雛形で見積書を作って"><div class="idea-icon">📝</div><h3>書類作成</h3><p class="idea-card__hint">「雛形で見積書を作って」</p><span class="copy-badge">tap to copy</span></div>
-    <div class="idea-card copyable" data-copy="Web情報を取ってきて"><div class="idea-icon">🌐</div><h3>ブラウザ操作</h3><p class="idea-card__hint">「Web情報を取ってきて」</p><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="散らかっているデスクトップを、種類ごとにフォルダ分けして整理して"><div class="idea-icon"><i class="fa-solid fa-folder-open"></i></div><h3>デスクトップ整理</h3><p class="idea-card__hint">「種類ごとに整理して」</p><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="学長おすすめの高配当株から、最新の銘柄を1つ取得して、現在の配当利回りを教えて"><div class="idea-icon"><i class="fa-solid fa-chart-line"></i></div><h3>高配当株チェック</h3><p class="idea-card__hint">「最新の銘柄を1つ教えて」</p><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="さっきの学長高配当株チェックのやり方をスキルにして、毎週火曜日に実行して"><div class="idea-icon"><i class="fa-solid fa-repeat"></i></div><h3>スキル化 + 定期実行</h3><p class="idea-card__hint">「次からは自動で」</p><span class="copy-badge">tap to copy</span></div>
   </div>
 </div>
 
@@ -414,9 +408,9 @@
   <div class="bg-dots"></div>
   <h2>コピペで使える依頼例</h2>
   <div class="idea-cards">
-    <div class="idea-card copyable" data-copy="Downloadsフォルダを種類と日付で整理して"><div class="idea-icon">🗂️</div><h3>Downloadsフォルダを<br>種類と日付で整理して</h3><span class="copy-badge">tap to copy</span></div>
-    <div class="idea-card copyable" data-copy="この会議メモからアクションアイテムをExcelに保存して"><div class="idea-icon">📝</div><h3>この会議メモから<br>アクションアイテムを<br>Excelに保存して</h3><span class="copy-badge">tap to copy</span></div>
-    <div class="idea-card copyable" data-copy="書類フォルダからA社との契約に関するファイルを探して"><div class="idea-icon">🔍</div><h3>書類フォルダから<br>A社との契約に関する<br>ファイルを探して</h3><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="Downloadsフォルダを種類と日付で整理して"><div class="idea-icon"><i class="fa-solid fa-folder-open"></i></div><h3>Downloadsフォルダを<br>種類と日付で整理して</h3><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="学長おすすめの高配当株から、最新の銘柄を1つ取得して、現在の配当利回りを教えて"><div class="idea-icon"><i class="fa-solid fa-search-dollar"></i></div><h3>学長おすすめの<br>高配当株から最新の銘柄を<br>1つ取ってきて</h3><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="さっきの学長高配当株チェックのやり方をスキルにして、毎週火曜日に実行して"><div class="idea-icon"><i class="fa-solid fa-calendar-week"></i></div><h3>さっきの高配当株チェックを<br>スキルにして<br>毎週火曜日に実行して</h3><span class="copy-badge">tap to copy</span></div>
   </div>
 </div>
 
@@ -430,11 +424,11 @@
   </div>
 </div>
 
-<!-- ==================== 22. CLOSING ==================== -->
+<!-- ==================== 22. BUFFER TIME ==================== -->
 <div class="slide slide-title slide-closing">
   <div class="bg-dots"></div>
   <div class="claude-logo"><svg><use href="#claude-icon"/></svg></div>
-  <h2>ご参加ありがとうございました。</h2>
+  <h2>予備時間</h2>
   <div class="host-area host-area--closing">
     <div class="host-area__col">
       <span class="host-label">👑 主催</span>
