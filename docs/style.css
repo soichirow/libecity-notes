@@ -349,9 +349,10 @@ body {
 .idea-card {
   background: #fff; border: 3px solid #f0e8e2; border-radius: 2.5vh;
   padding: 2.5vh 1.5vw; text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
-.idea-card .idea-icon { font-size: 6vh; margin-bottom: 1vh; }
-.idea-card h3 { font-size: 2.8vh; color: var(--orange); font-weight: 900; }
+.idea-card .idea-icon { font-size: 6vh; margin-bottom: 1vh; display: flex; align-items: center; justify-content: center; }
+.idea-card h3 { font-size: 2.8vh; color: var(--orange); font-weight: 900; margin: 0; }
 
 /* ====== PROMPT BOX ====== */
 .prompt-box {
