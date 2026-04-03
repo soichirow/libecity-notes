@@ -9,6 +9,13 @@
 </head>
 <body>
 
+<!-- SVG Symbol definition (reused in multiple slides) -->
+<svg style="display:none;">
+  <symbol id="claude-icon" viewBox="0 0 24 24">
+    <path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z"/>
+  </symbol>
+</svg>
+
 <div class="progress-bar" id="progressBar"></div>
 
 <!-- ==================== Section 1: OPENING ==================== -->
@@ -23,16 +30,16 @@
 <div class="slide slide-title">
   <div class="bg-dots"></div>
   <div class="title-row">
-    <div class="claude-logo"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z"/></svg></div>
+    <div class="claude-logo"><svg><use href="#claude-icon"/></svg></div>
     <h1>Claudeを中心に<br>生成AIで遊んだり雑談しよう</h1>
-    <div class="host-area" style="pointer-events:none;flex-direction:row;gap:2vw;align-items:flex-start;">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.3vh;">
+    <div class="host-area host-area--title">
+      <div class="host-area__col">
         <span class="host-label">👑 主催</span>
         <div class="member-cell checked-in"><img src="https://storage.googleapis.com/production-b8884.appspot.com/user/icon/jQeEHAiqQrYgoP8CaA9rTZZJBx03/thumbnail.image/jpeg?ts=1658637650547" alt=""><span class="member-name">そういちろう</span></div>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0.3vh;">
-        <span class="host-label" style="opacity:0;visibility:hidden;">👑 placeholder</span>
-        <div class="member-cell checked-in"><img src="daughter-lion.png" alt="" style="object-fit:cover;object-position:right center;"><span class="member-name"></span></div>
+      <div class="host-area__col">
+        <span class="host-label host-label--hidden">👑 placeholder</span>
+        <div class="member-cell checked-in"><img src="daughter-lion.png" alt="" class="img-cover-right"><span class="member-name"></span></div>
       </div>
     </div>
   </div>
@@ -93,8 +100,8 @@
         娘は2022年生まれの3歳です。とてもかわいいです🦁
       </div>
     </div>
-    <div style="flex-shrink:0;">
-      <img src="daughter-lion.png" alt="娘" style="width:18vh;height:18vh;border-radius:50%;object-fit:cover;object-position:right center;border:6px solid var(--orange);">
+    <div class="host-intro__daughter">
+      <img src="daughter-lion.png" alt="娘" class="host-intro__daughter-img">
     </div>
   </div>
 </div>
@@ -110,7 +117,7 @@
 <!-- ==================== 5. ICEBREAK ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
-  <h2>アイスブレイク<br><span style="font-size:3vh;color:var(--text-mid);">4人1組くらいになって、一人1分くらいでお話ししましょう!</span></h2>
+  <h2>アイスブレイク<br><span class="h2-sub">4人1組くらいになって、一人1分くらいでお話ししましょう!</span></h2>
   <div class="icebreak-list">
     <div class="icebreak-item">
       <div class="ib-icon">👋</div>
@@ -139,47 +146,45 @@
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>Claudeってなに?</h2>
-    <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
-      <div class="feature-card">
-        <div class="icon">🤖</div>
-        <h3>Anthropic社の生成AI</h3>
-        <p>ChatGPTのライバル。自然な日本語と丁寧な回答が特徴。学長も注目!</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">💬</div>
-        <h3>会話で何でもできる</h3>
-        <p>文章作成、相談、アイデア出し、プログラミング、翻訳...</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">📱</div>
-        <h3>どこでも使える</h3>
-        <p>Web / iPhone / Android / PC アプリ対応</p>
-      </div>
+  <div class="feature-grid three-cols">
+    <div class="feature-card">
+      <div class="icon">🤖</div>
+      <h3>Anthropic社の生成AI</h3>
+      <p>ChatGPTのライバル。自然な日本語と丁寧な回答が特徴。学長も注目!</p>
     </div>
+    <div class="feature-card">
+      <div class="icon">💬</div>
+      <h3>会話で何でもできる</h3>
+      <p>文章作成、相談、アイデア出し、プログラミング、翻訳...</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📱</div>
+      <h3>どこでも使える</h3>
+      <p>Web / iPhone / Android / PC アプリ対応</p>
+    </div>
+  </div>
 </div>
 
 <!-- ==================== 7. THIS SLIDE = CLAUDE ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
-  <div class="big-msg" style="text-align:center;">
+  <div class="big-msg text-center">
     ちなみに...<br><br>
     <span class="huge">このスライドも<br>Claudeで作りました</span>
     <br>
-    <span style="font-size:2.8vh;color:var(--text-mid);">こだわらなければ <strong style="color:var(--orange);">約1時間</strong> で完成</span><br>
-    <span style="font-size:2.2vh;color:var(--text-light);">こだわると...無限の時間!<br>(実際は楽しく3時間程度かけました)</span>
+    <span class="text-sub">こだわらなければ <strong class="accent">約1時間</strong> で完成</span><br>
+    <span class="text-note">こだわると...無限の時間!<br>(実際は楽しく3時間程度かけました)</span>
   </div>
 </div>
 
-
-
-<!-- ==================== 8. REAL EXPERIENCE (Move Up) ==================== -->
+<!-- ==================== 8. REAL EXPERIENCE ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
-  <div style="display:flex;align-items:center;gap:1.5vw;justify-content:center;">
+  <div class="slide-header-with-avatar">
     <div class="member-cell">
       <img src="https://storage.googleapis.com/production-b8884.appspot.com/user/icon/jQeEHAiqQrYgoP8CaA9rTZZJBx03/thumbnail.image/jpeg?ts=1658637650547" alt="">
     </div>
-    <h2 style="margin:0;">実演: 2時間で作ったサイト</h2>
+    <h2 class="no-margin">実演: 2時間で作ったサイト</h2>
   </div>
   <div class="experience-card">
     <div class="exp-title"><a href="https://soichirow.github.io/my-9-cards-mtg/" target="_blank">私を作ったマジック9枚</a></div>
@@ -202,17 +207,17 @@
   <div class="big-msg">
     AIは<br>
     <span class="huge">「相談相手」から<br>「実務の代行者」へ</span>
-    <span style="font-size:3vh;color:var(--text-mid);">PC操作・ブラウザ操作・自動実行の時代</span>
+    <span class="text-sub">PC操作・ブラウザ操作・自動実行の時代</span>
   </div>
 </div>
 
-<!-- ==================== 10. 他のAIとの比較 (ChatGPT vs Claude) ==================== -->
+<!-- ==================== 10. ChatGPT vs Claude ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>「相談」から「依頼」へ</h2>
   <div class="compare-container">
     <div class="compare-box">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" class="brand-icon" style="filter: invert(41%) sepia(91%) saturate(350%) hue-rotate(120deg) brightness(91%) contrast(90%);">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" class="brand-icon brand-icon--openai">
       <h3>ChatGPT</h3>
       <ul>
         <li>優秀な「相談役」</li>
@@ -221,7 +226,7 @@
       </ul>
     </div>
     <div class="compare-box claude">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/anthropic.svg" class="brand-icon" style="filter: invert(45%) sepia(88%) saturate(1200%) hue-rotate(345deg) brightness(100%) contrast(100%);">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/anthropic.svg" class="brand-icon brand-icon--anthropic">
       <h3>Claude Cowork</h3>
       <ul>
         <li>最強の「代行者」</li>
@@ -236,7 +241,7 @@
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>すごいぞ！Claude Cowork</h2>
-  <p class="sub-msg" style="margin-top:-2vh;margin-bottom:3vh;">パソコンのファイルを読み書きできる！</p>
+  <p class="sub-msg sub-msg--top">パソコンのファイルを読み書きできる！</p>
   <div class="feature-grid three-cols">
     <div class="feature-card code-highlight">
       <div class="icon">🌐</div>
@@ -270,77 +275,69 @@
       <div class="step-text"><strong>一言で呼び出し</strong><br>「いつもの資料作って」だけで、教えた手順を忠実に再現</div>
     </div>
   </div>
-  <p style="font-size:2.8vh;color:var(--text-mid);margin-top:2vh;">※ あなただけの「専属アシスタント」が育ちます</p>
+  <p class="text-sub text-sub--spaced">※ あなただけの「専属アシスタント」が育ちます</p>
 </div>
-
-<!-- Section 4 merged into Section 3 -->
-
 
 <!-- ==================== 13. CLAUDE CODE & COWORK ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>Claudeの2つのエージェント</h2>
-  <div style="display:flex;gap:3vw;width:95%;max-width:1100px;align-items:stretch;">
-    <div class="feature-card code-highlight" style="flex:1;border-color:var(--orange);">
+  <div class="agent-compare">
+    <div class="feature-card code-highlight agent-compare__card">
       <div class="icon">🤝</div>
       <h3>Cowork</h3>
       <p>誰でも使える。チャット感覚でPC操作・ブラウザ操作・ファイル作成まで</p>
-      <div class="screenshot-item" style="margin-top:1.5vh;border:none;box-shadow:none;"><img src="cowork-welcome.png" alt="Cowork" style="width:100%;border-radius:1vh;"></div>
+      <div class="agent-compare__img"><img src="cowork-welcome.png" alt="Cowork"></div>
     </div>
-    <div class="feature-card" style="flex:1;opacity:0.8;">
+    <div class="feature-card agent-compare__card agent-compare__card--secondary">
       <div class="icon">💻</div>
       <h3>Claude Code</h3>
       <p>エンジニア向け。ターミナルで動作し、ソースコード全般を自動編集</p>
-      <div class="screenshot-item" style="margin-top:1.5vh;border:none;box-shadow:none;"><img src="claude-code.png" alt="Claude Code" style="width:100%;border-radius:1vh;"></div>
+      <div class="agent-compare__img"><img src="claude-code.png" alt="Claude Code"></div>
     </div>
   </div>
-  <p style="font-size:4.5vh;color:var(--orange);margin-top:3vh;font-weight:900;text-shadow:0 2px 10px rgba(255,107,43,0.2);">初心者はまず Cowork を触ってみよう! 🚀</p>
+  <p class="cta-msg">初心者はまず Cowork を触ってみよう! 🚀</p>
 </div>
-<!-- Content cleaned (removed ghost text) -->
 
-
-
-<!-- ==================== 13. Cowork: AIの進化 ==================== -->
-
-<!-- ==================== 14. Cowork: AIの進化 ==================== -->
+<!-- ==================== 14. AIの進化 ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <div class="big-msg">
     AIは<br>
     <span class="huge">「相談相手」から<br>「任せる相手」へ</span>
-    <span style="font-size:3vh;color:var(--text-mid);">質問するだけでなく、実際の作業を任せて時短する時代</span>
+    <span class="text-sub">質問するだけでなく、実際の作業を任せて時短する時代</span>
   </div>
 </div>
 
-<!-- ==================== 15. Cowork: 概要 (Image Enlarged) ==================== -->
+<!-- ==================== 15. 導入はかんたん ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>導入はかんたん！</h2>
-  <div style="display:flex;gap:4vw;width:95%;max-width:1200px;align-items:center;">
-    <div class="install-steps" style="flex:1.2;width:auto;">
-      <div class="install-step" style="padding:1.5vh 2vw;margin-bottom:1vh;">
-        <div class="step-number" style="width:5vh;height:5vh;">🤝</div>
-        <div class="step-text" style="font-size:2.2vh;">Desktopアプリの<strong>「Cowork」タブ</strong>を選ぶだけ</div>
+  <div class="intro-layout">
+    <div class="install-steps install-steps--compact">
+      <div class="install-step install-step--small">
+        <div class="step-number step-number--small">🤝</div>
+        <div class="step-text step-text--small">Desktopアプリの<strong>「Cowork」タブ</strong>を選ぶだけ</div>
       </div>
-      <div class="install-step" style="padding:1.5vh 2vw;margin-bottom:1vh;">
-        <div class="step-number" style="width:5vh;height:5vh;">📁</div>
-        <div class="step-text" style="font-size:2.2vh;"><strong>ファイルを渡す</strong>と中身を読み解き作業開始</div>
+      <div class="install-step install-step--small">
+        <div class="step-number step-number--small">📁</div>
+        <div class="step-text step-text--small"><strong>ファイルを渡す</strong>と中身を読み解き作業開始</div>
       </div>
-      <div class="install-step" style="padding:1.5vh 2vw;margin-bottom:1vh;">
-        <div class="step-number" style="width:5vh;height:5vh;">🌐</div>
-        <div class="step-text" style="font-size:2.2vh;"><strong>Chrome拡張</strong>でWeb調査も任せられる</div>
+      <div class="install-step install-step--small">
+        <div class="step-number step-number--small">🌐</div>
+        <div class="step-text step-text--small"><strong>Chrome拡張</strong>でWeb調査も任せられる</div>
       </div>
     </div>
-    <div style="flex:2;">
-      <div class="screenshot-item" style="border:5px solid var(--orange);box-shadow:0 10px 40px rgba(255,107,43,0.2);">
-        <img src="cowork-welcome.png" alt="Cowork画面" style="width:100%;display:block;">
-        <div class="screenshot-caption" style="font-size:2vh;background:var(--orange);color:#fff;">実際のCoworkの操作画面</div>
+    <div class="intro-layout__screenshot">
+      <div class="screenshot-item screenshot-item--featured">
+        <img src="cowork-welcome.png" alt="Cowork画面">
+        <div class="screenshot-caption screenshot-caption--accent">実際のCoworkの操作画面</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ==================== 15. Coworkを使うコツ ==================== -->
+<!-- ==================== 16. Coworkを使うコツ ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>Coworkを使う最重要ルール</h2>
@@ -356,14 +353,14 @@
   </div>
 </div>
 
-<!-- ==================== 16. INSTALL ==================== -->
+<!-- ==================== 17. INSTALL ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>まずは無料でインストール!</h2>
   <div class="install-steps">
     <div class="install-step">
       <div class="step-number">1</div>
-      <div class="step-text"><strong><a href="https://claude.ai" target="_blank" style="color:var(--orange);">claude.ai</a></strong> にアクセス</div>
+      <div class="step-text"><strong><a href="https://claude.ai" target="_blank" class="link-orange">claude.ai</a></strong> にアクセス</div>
     </div>
     <div class="install-step">
       <div class="step-number">2</div>
@@ -376,7 +373,7 @@
   </div>
 </div>
 
-<!-- ==================== 17. 料金について ==================== -->
+<!-- ==================== 18. 料金について ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>さらに使いこなすなら (料金)</h2>
@@ -385,7 +382,7 @@
       <div class="step-number">💰</div>
       <div class="step-text"><strong>Proプラン ($20/月)</strong><br>Cowork、スキル、最新モデル(Claude 3.7)が使い放題</div>
     </div>
-    <p style="font-size:3vh;background:rgba(255,107,43,0.1);padding:1.5vh 2vw;border-radius:1vh;color:var(--orange);margin-top:2vh;font-weight:900;">まずは無料版で触ってみて、良ければProへ🚀</p>
+    <p class="tip-box">まずは無料版で触ってみて、良ければProへ🚀</p>
   </div>
 </div>
 
@@ -397,85 +394,84 @@
   <p class="section-subtitle">実際にさわってみよー！ (45分)</p>
 </div>
 
-<!-- ==================== 20. HANDS-ON ==================== -->
+<!-- ==================== 19. HANDS-ON ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>実際にさわってみよー！</h2>
   <div class="big-msg">
     <span class="huge">わからなければ<br>たすけます！🦁</span>
   </div>
-  <p style="font-size:3vh;color:var(--text-mid);margin-top:2vh;">隣の人と相談しながらでもOKです</p>
-  <div class="idea-cards" style="margin-top:4vh;">
-    <div class="idea-card"><div class="idea-icon">🗂️</div><h3>フォルダ整理</h3><p style="font-size:1.4vh;color:var(--text-mid);">「ファイルを整理して」</p></div>
-    <div class="idea-card"><div class="idea-icon">📝</div><h3>書類作成</h3><p style="font-size:1.4vh;color:var(--text-mid);">「雛形で見積書を作って」</p></div>
-    <div class="idea-card"><div class="idea-icon">🌐</div><h3>ブラウザ操作</h3><p style="font-size:1.4vh;color:var(--text-mid);">「Web情報を取ってきて」</p></div>
+  <p class="text-sub text-sub--spaced">隣の人と相談しながらでもOKです</p>
+  <div class="idea-cards idea-cards--spaced">
+    <div class="idea-card copyable" data-copy="ファイルを整理して"><div class="idea-icon">🗂️</div><h3>フォルダ整理</h3><p class="idea-card__hint">「ファイルを整理して」</p><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="雛形で見積書を作って"><div class="idea-icon">📝</div><h3>書類作成</h3><p class="idea-card__hint">「雛形で見積書を作って」</p><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="Web情報を取ってきて"><div class="idea-icon">🌐</div><h3>ブラウザ操作</h3><p class="idea-card__hint">「Web情報を取ってきて」</p><span class="copy-badge">tap to copy</span></div>
   </div>
 </div>
 
-<!-- ==================== 21. COWORK PROMPTS ==================== -->
+<!-- ==================== 20. COWORK PROMPTS ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>コピペで使える依頼例</h2>
   <div class="idea-cards">
-    <div class="idea-card"><div class="idea-icon">🗂️</div><h3>Downloadsフォルダを<br>種類と日付で整理して</h3></div>
-    <div class="idea-card"><div class="idea-icon">📝</div><h3>この会議メモから<br>アクションアイテムを<br>Excelに保存して</h3></div>
-    <div class="idea-card"><div class="idea-icon">🔍</div><h3>書類フォルダから<br>A社との契約に関する<br>ファイルを探して</h3></div>
+    <div class="idea-card copyable" data-copy="Downloadsフォルダを種類と日付で整理して"><div class="idea-icon">🗂️</div><h3>Downloadsフォルダを<br>種類と日付で整理して</h3><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="この会議メモからアクションアイテムをExcelに保存して"><div class="idea-icon">📝</div><h3>この会議メモから<br>アクションアイテムを<br>Excelに保存して</h3><span class="copy-badge">tap to copy</span></div>
+    <div class="idea-card copyable" data-copy="書類フォルダからA社との契約に関するファイルを探して"><div class="idea-icon">🔍</div><h3>書類フォルダから<br>A社との契約に関する<br>ファイルを探して</h3><span class="copy-badge">tap to copy</span></div>
   </div>
 </div>
 
-<!-- ==================== 22. 4人で雑談 ==================== -->
+<!-- ==================== 21. 4人で雑談 ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <div class="big-msg">
     <span class="huge">4人で雑談タイム!</span>
     面白かったこと・気づき・質問を<br>シェアしよう<br><br>
-    <span style="font-size:3vh;color:var(--text-light);">× 3回 メンバーチェンジ</span>
+    <span class="text-note--inline">× 3回 メンバーチェンジ</span>
   </div>
 </div>
 
-<!-- ==================== 23. CLOSING ==================== -->
-<div class="slide slide-title slide-closing" style="gap:2vh;">
+<!-- ==================== 22. CLOSING ==================== -->
+<div class="slide slide-title slide-closing">
   <div class="bg-dots"></div>
-  <div class="claude-logo"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z"/></svg></div>
+  <div class="claude-logo"><svg><use href="#claude-icon"/></svg></div>
   <h2>ご参加ありがとうございました。</h2>
-  <div class="host-area" style="pointer-events:none;flex-direction:row;gap:3vw;align-items:center;justify-content:center;">
-    <div style="display:flex;flex-direction:column;align-items:center;gap:0.5vh;">
+  <div class="host-area host-area--closing">
+    <div class="host-area__col">
       <span class="host-label">👑 主催</span>
       <div class="member-cell checked-in"><img src="https://storage.googleapis.com/production-b8884.appspot.com/user/icon/jQeEHAiqQrYgoP8CaA9rTZZJBx03/thumbnail.image/jpeg?ts=1658637650547" alt=""><span class="member-name">そういちろう</span></div>
     </div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:0.5vh;">
-      <span class="host-label" style="opacity:0;">（娘）</span>
-      <div class="member-cell checked-in"><img src="daughter-lion.png" alt="" style="object-fit:cover;object-position:right center;"><span class="member-name" style="display:none;"> </span></div>
+    <div class="host-area__col">
+      <span class="host-label host-label--hidden">（娘）</span>
+      <div class="member-cell checked-in"><img src="daughter-lion.png" alt="" class="img-cover-right"><span class="member-name" hidden> </span></div>
     </div>
   </div>
-
 </div>
 
-<!-- ==================== 24. REFERENCES ==================== -->
+<!-- ==================== 23. REFERENCES ==================== -->
 <div class="slide slide-overview">
   <div class="bg-dots"></div>
   <h2>参考資料</h2>
   <div class="install-steps">
     <div class="install-step">
       <div class="step-number">📖</div>
-      <div class="step-text"><a href="https://library.libecity.com/articles/01KM04CT0G46HVKKCHSWEA7Y4N" target="_blank" style="color:var(--orange);font-weight:700;">neco🐈‍⬛「初心者の味方、AIエージェント Claude Cowork で作業を任せる方法」</a></div>
+      <div class="step-text"><a href="https://library.libecity.com/articles/01KM04CT0G46HVKKCHSWEA7Y4N" target="_blank" class="link-orange">neco🐈‍⬛「初心者の味方、AIエージェント Claude Cowork で作業を任せる方法」</a></div>
     </div>
     <div class="install-step">
       <div class="step-number">⚙️</div>
-      <div class="step-text"><a href="https://library.libecity.com/articles/01KMSCAGSJKF97C2SWV81X0NTZ" target="_blank" style="color:var(--orange);font-weight:700;">これだけは設定しておいて！Claude Cowork/Code設定ガイド</a></div>
+      <div class="step-text"><a href="https://library.libecity.com/articles/01KMSCAGSJKF97C2SWV81X0NTZ" target="_blank" class="link-orange">これだけは設定しておいて！Claude Cowork/Code設定ガイド</a></div>
     </div>
     <div class="install-step">
       <div class="step-number">💻</div>
-      <div class="step-text"><a href="https://library.libecity.com/articles/01KMPCB30RPW14V0WYA2BW5ARG" target="_blank" style="color:var(--orange);font-weight:700;">【IT初心者でも大丈夫！】Claude Code、Coworkのインストール手順解説</a></div>
+      <div class="step-text"><a href="https://library.libecity.com/articles/01KMPCB30RPW14V0WYA2BW5ARG" target="_blank" class="link-orange">【IT初心者でも大丈夫！】Claude Code、Coworkのインストール手順解説</a></div>
     </div>
     <div class="install-step">
       <div class="step-number">📱</div>
-      <div class="step-text"><a href="https://library.libecity.com/articles/01KN1S73724GJW8RV3TW9B0QSM" target="_blank" style="color:var(--orange);font-weight:700;">ClaudeCoworkの導入手順を超シンプルに画像付きでまとめました。</a></div>
+      <div class="step-text"><a href="https://library.libecity.com/articles/01KN1S73724GJW8RV3TW9B0QSM" target="_blank" class="link-orange">ClaudeCoworkの導入手順を超シンプルに画像付きでまとめました。</a></div>
     </div>
   </div>
 </div>
 
-<div class="page-number" id="pageNumber">1 / 29</div>
+<div class="page-number" id="pageNumber">1 / 23</div>
 
 <!-- Nav -->
 <div class="nav">
