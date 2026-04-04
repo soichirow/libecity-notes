@@ -18,12 +18,20 @@ function countMatches(source, regex) {
   return (source.match(regex) || []).length;
 }
 
+function getSlideBlocks(source) {
+  return [...source.matchAll(/<div class="slide[\s\S]*?<\/div>\s*(?=\n<!-- ====================|\n<div class="page-number"|$)/g)].map((match) => match[0]);
+}
+
+function findSlideByHeading(headingHtml) {
+  return getSlideBlocks(html).find((slide) => slide.includes(headingHtml));
+}
+
 test('initial page display matches slide count', () => {
-  const slideCount = countMatches(html, /<div class="slide\b/g);
+  const slideCount = countMatches(html, /<div class="slide(?:\s|")/g);
   const pageNumber = html.match(/<div class="page-number" id="pageNumber">([^<]+)<\/div>/)?.[1]?.trim();
   const pageInfo = html.match(/<span class="page-info" id="pageInfo">([^<]+)<\/span>/)?.[1]?.trim();
 
-  assert.equal(slideCount, 25);
+  assert.equal(slideCount, 24);
   assert.equal(pageNumber, `1 / ${slideCount}`);
   assert.equal(pageInfo, `1 / ${slideCount}`);
 });
@@ -33,9 +41,18 @@ test('image-enhanced slides use the expected compact layout classes', () => {
   assert.equal(countMatches(html, /slide-overview--schedule/g), 1);
   assert.equal(countMatches(html, /slide-overview--experience/g), 1);
 
-  assert.match(html, /slide-overview--browser[\s\S]*?<h2>ブラウザを扱える<\/h2>/);
-  assert.match(html, /slide-overview--schedule[\s\S]*?<h2>スケジュールで定期タスクを回せる<\/h2>/);
-  assert.match(html, /slide-overview--experience[\s\S]*?<h2 class="no-margin">実演: 2時間で作ったサイト<\/h2>[\s\S]*?experience-card--with-preview/);
+  const browserSlide = findSlideByHeading('<h2>ブラウザを扱える</h2>');
+  const scheduleSlide = findSlideByHeading('<h2>スケジュールで定期タスクを回せる</h2>');
+  const experienceSlide = findSlideByHeading('<h2 class="no-margin">実演: 2時間で作ったサイト</h2>');
+
+  assert.ok(browserSlide, 'browser slide not found');
+  assert.ok(scheduleSlide, 'schedule slide not found');
+  assert.ok(experienceSlide, 'experience slide not found');
+
+  assert.match(browserSlide, /slide-overview--browser/);
+  assert.match(scheduleSlide, /slide-overview--schedule/);
+  assert.match(experienceSlide, /slide-overview--experience/);
+  assert.match(experienceSlide, /experience-card--with-preview/);
 });
 
 test('local image references used by the slides exist on disk', () => {

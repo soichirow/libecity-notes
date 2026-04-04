@@ -2,3 +2,7 @@ _archive/
 _work/
 .claude/
 .edge-review/
+.edge-cdp-*/
+review-one*.png
+review-slide14-scrollfix.png
+review-slides*/

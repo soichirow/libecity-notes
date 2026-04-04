@@ -365,12 +365,23 @@ body {
 
 .slide-overview--browser h2,
 .slide-overview--schedule h2 {
+  font-size: 5.8vh;
+  line-height: 1.12;
   margin-bottom: 1.8vh;
+}
+
+.slide-overview--browser,
+.slide-overview--schedule {
+  justify-content: flex-start;
+  padding-top: 2.2vh;
 }
 
 .slide-overview--browser .intro-layout,
 .slide-overview--schedule .intro-layout {
   gap: 1.8vw;
+  transform: scale(0.9);
+  transform-origin: top center;
+  width: 108%;
 }
 
 .slide-overview--browser .install-step,
@@ -581,6 +592,11 @@ body {
 
 .slide-overview--experience .site-preview img {
   max-height: 22vh;
+}
+
+.slide-overview--experience .site-preview--inline {
+  max-width: 24vw;
+  min-width: 260px;
 }
 
 .slide-overview--experience .site-preview__caption,
