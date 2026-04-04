@@ -82,10 +82,10 @@ document.querySelectorAll('.copyable[data-copy]').forEach(card => {
     copyText(card.dataset.copy);
     card.classList.add('copied');
     const badge = card.querySelector('.copy-badge');
-    if (badge) badge.textContent = 'Copied!';
+    if (badge) badge.textContent = 'コピーしました';
     setTimeout(() => {
       card.classList.remove('copied');
-      if (badge) badge.textContent = 'tap to copy';
+      if (badge) badge.textContent = 'クリックでコピーできます';
     }, 1500);
   });
 });
