@@ -363,6 +363,45 @@ body {
   flex: 0.95; display: flex; align-items: center;
 }
 
+.slide-overview--browser h2,
+.slide-overview--schedule h2 {
+  margin-bottom: 1.8vh;
+}
+
+.slide-overview--browser .intro-layout,
+.slide-overview--schedule .intro-layout {
+  gap: 1.8vw;
+}
+
+.slide-overview--browser .install-step,
+.slide-overview--schedule .install-step {
+  padding: 2vh 2.2vw;
+  margin-bottom: 1vh;
+}
+
+.slide-overview--browser .step-number,
+.slide-overview--schedule .step-number {
+  width: 6.4vh;
+  height: 6.4vh;
+}
+
+.slide-overview--browser .step-number i,
+.slide-overview--schedule .step-number i {
+  font-size: 2.7vh;
+}
+
+.slide-overview--browser .step-text,
+.slide-overview--schedule .step-text {
+  font-size: 2.6vh;
+  line-height: 1.45;
+}
+
+.slide-overview--browser .tip-box {
+  margin-top: 1.2vh;
+  padding: 1.1vh 1.6vw;
+  font-size: 2.55vh;
+}
+
 .install-steps { width: 92%; max-width: 900px; }
 .install-step {
   display: flex; align-items: center; gap: 3vw;
@@ -461,6 +500,10 @@ body {
   display: flex; gap: 2vw; width: 95%; max-width: 1180px; align-items: stretch;
 }
 .experience-layout .experience-card { width: auto; flex: 1.2; }
+.experience-card--with-preview {
+  width: 95%;
+  max-width: 1100px;
+}
 .exp-title { font-size: 4.5vh; font-weight: 900; color: var(--orange); margin-bottom: 1vh; }
 .exp-title a { color: var(--orange); text-decoration: underline; text-underline-offset: 0.5vh; }
 .exp-subtitle { font-size: 2.45vh; color: var(--text-light); line-height: 1.56; margin-bottom: 2vh; }
@@ -503,10 +546,71 @@ body {
   object-fit: contain;
   padding: 1vh;
 }
+.site-preview--inline {
+  width: 100%;
+  max-width: 62vw;
+  margin: 0 auto 1.8vh;
+}
 .site-preview__caption {
   padding: 1.5vh 1.5vw; font-size: 2.1vh; line-height: 1.5;
   color: var(--text-mid); font-weight: 700;
   background: linear-gradient(180deg, #fff, #fff8f1);
+}
+
+.slide-overview--experience .slide-header-with-avatar {
+  margin-bottom: 1.2vh;
+}
+
+.slide-overview--experience .slide-header-with-avatar .member-cell img {
+  width: 9vh;
+  height: 9vh;
+}
+
+.slide-overview--experience .experience-card {
+  padding: 2.4vh 2.8vw;
+}
+
+.slide-overview--experience .exp-title {
+  font-size: 4vh;
+}
+
+.slide-overview--experience .exp-subtitle {
+  font-size: 2.2vh;
+  margin-bottom: 1.4vh;
+}
+
+.slide-overview--experience .site-preview img {
+  max-height: 22vh;
+}
+
+.slide-overview--experience .site-preview__caption,
+.slide-overview--browser .screenshot-caption,
+.slide-overview--schedule .screenshot-caption {
+  font-size: 1.85vh;
+  line-height: 1.35;
+  padding: 1vh 1.2vw;
+}
+
+.slide-overview--experience .exp-stats {
+  margin-bottom: 1.5vh;
+}
+
+.slide-overview--experience .exp-stat {
+  padding: 1.6vh 2.1vw;
+}
+
+.slide-overview--experience .exp-stat-number {
+  font-size: 4.5vh;
+}
+
+.slide-overview--experience .exp-stat-label {
+  font-size: 1.95vh;
+}
+
+.slide-overview--experience .exp-before,
+.slide-overview--experience .exp-after {
+  padding: 1.5vh 2vw;
+  font-size: 2.4vh;
 }
 
 /* ====== DEMO ====== */
@@ -635,10 +739,10 @@ body {
   width: 100%; display: block;
 }
 .screenshot-item--stock img {
-  max-height: 28vh; object-fit: cover; object-position: top center;
+  max-height: 20vh; object-fit: cover; object-position: top center;
 }
 .screenshot-item--schedule img {
-  max-height: 28vh; object-fit: contain; background: #1f1f1f;
+  max-height: 20vh; object-fit: contain; background: #1f1f1f;
 }
 .screenshot-item .screenshot-caption {
   padding: 1.5vh 2vw; font-size: 2.4vh; font-weight: 700; color: var(--text-mid);
@@ -785,6 +889,16 @@ body {
 
   .site-preview img {
     max-height: 38vh;
+  }
+
+  .site-preview--inline {
+    max-width: 100%;
+  }
+
+  .slide-overview--browser .screenshot-item--stock img,
+  .slide-overview--schedule .screenshot-item--schedule img,
+  .slide-overview--experience .site-preview img {
+    max-height: 24vh;
   }
 
   .hero-pills,
